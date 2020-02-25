@@ -80,7 +80,7 @@ install-linuxbrew(){
     echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >>~/.zprofile
     eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-    brew install gcc git-quick-stats thefuck cheat
+    brew install gcc git-quick-stats cheat
     brew install ripgrep bat exa neovim git fzf
     brew install getantibody/tap/antibody
     brew install ctop hub onefetch

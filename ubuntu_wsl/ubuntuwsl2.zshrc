@@ -18,7 +18,7 @@ ZSH_THEME="sukka"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_DISABLE_COMPFIX=true
-
+DISABLE_CORRECTION=true
 plugins=(
     git
     history
