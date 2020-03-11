@@ -185,26 +185,16 @@ proxy () {
     getIp
 
     # pip can read http_proxy & https_proxy
-    # http_proxy
     export http_proxy="${PROXY_HTTP}"
     export HTTP_PROXY="${PROXY_HTTP}"
-
-    # https_proxy
     export https_proxy="${PROXY_HTTP}"
     export HTTPS_proxy="${PROXY_HTTP}"
-
-    # ftp_proxy
     export ftp_proxy="${PROXY_HTTP}"
     export FTP_PROXY="${PROXY_HTTP}"
-
-    # rsync_proxy
     export rsync_proxy="${PROXY_HTTP}"
     export RSYNC_PROXY="${PROXY_HTTP}"
-
-    # all_proxy
     export ALL_PROXY="${PROXY_SOCKS5}"
     export all_proxy="${PROXY_SOCKS5}"
-
     sh $HOME/dotfiles/ubuntu_wsl/git_proxy.sh
     if [ ! $1 ]; then
         ip_
@@ -308,6 +298,8 @@ u-update() {
     sudo apt-get update && sudo apt-get -y upgrade
     brew upgrade --verbose
     antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+    nali-update
+    nvm upgrade
 }
 
 zsh_history_fix() {
